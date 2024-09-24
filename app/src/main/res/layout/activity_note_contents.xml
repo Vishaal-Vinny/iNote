@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteContents"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_layout">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:id="@+id/cancel_btn"
+            android:gravity="center"
+            android:background="@drawable/border"
+            android:layout_marginLeft="250dp"
+            android:text="Cancel"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="New iNote"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="40dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:src="@drawable/add_icon"
+            android:id="@+id/save_note_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/btn_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:layout_marginRight="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Bold" />
+
+        <TextView
+            android:id="@+id/btn_italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I"
+            android:layout_marginRight="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Italic" />
+
+        <TextView
+            android:id="@+id/btn_underline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="U"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Underline" />
+
+        <TextView
+            android:id="@+id/btn_bullet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="•"
+            android:layout_marginRight="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Bullet" />
+
+        <TextView
+            android:id="@+id/btn_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:layout_marginRight="5dp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Number" />
+
+        <TextView
+            android:id="@+id/btn_color"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Color" />
+
+        <TextView
+            android:id="@+id/btn_undo"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↶"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Undo" />
+
+        <TextView
+            android:id="@+id/btn_redo"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↷"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Redo" />
+
+        <TextView
+            android:id="@+id/btn_clear"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✖"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Clear" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:layout_below="@+id/toolbar_layout"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/border">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_txt"
+            android:hint="Title"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginVertical="8dp"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+
+        <jp.wasabeef.richeditor.RichEditor
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/notes_content_txt"
+            android:textSize="20dp"
+            android:minLines="15"
+            android:gravity="top"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/deleteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Delete"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:id="@+id/icon_ai"
+        android:layout_width="32dp"
+        android:background="@drawable/openai_icon"
+        android:gravity="center"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="100dp"
+        />
+
+    <TextView
+        android:id="@+id/icon_speech"
+        android:layout_width="20dp"
+        android:background="@drawable/mic_icon"
+        android:gravity="center"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="100dp"
+        />
+
+</RelativeLayout>

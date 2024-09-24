@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "738227150850",
+    "project_id": "jots-f0697",
+    "storage_bucket": "jots-f0697.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738227150850:android:814d619f760b91a732c71b",
+        "android_client_info": {
+          "package_name": "com.example.jots"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvBU02QcBY07_Fuli3bD12Ss_2GxHM9DM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
